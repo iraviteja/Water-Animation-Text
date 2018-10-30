@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Water Animation Text</title>
+</head>
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: 'ARIEL';
+		background: #262626;
+	}
+	
+	.loader{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.loader h1{
+		margin: 0;
+		padding: 0;
+		font-size: 14em;
+    	color:rgba(255,255,255,.1);
+    	background-image: url('bgimage.png');
+    	background-repeat: repeat-x;
+    	-webkit-background-clip: text;
+    	animation: animate 15s linear infinite;
+	}
+	@keyframes animate {
+		0%{
+			background-position: left 0 top 0px;
+		}
+		20%{
+			background-position: left 800px top -50px;
+		}
+		40%{
+			background-position: left 1800px top -60px;
+		}
+		60%{
+			background-position: left 2400px top -80px;
+		}
+		80%{
+			background-position: left 3400px top -50px;
+		}
+		100%{
+			background-position: left 4400px top 50px;
+		}
+	}
+</style>
+<body>
+	<div class="loader">
+		<h1>Loading</h1>
+	</div>
+</body>
+</html>
